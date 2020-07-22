@@ -14,7 +14,7 @@ create_Plot2 <- function() {
   dateTime <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S") 
   
   # plotting a line graph with dateTime as x and Global_active_power as y values
-  plot(dateTime, data$Global_active_power, type="l", ylab="Global Active Power (kilowatts)")
+  plot(dateTime, data$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
   
   dev.print(png, file = "plot2.png", width = 1024, height = 768)
 }
